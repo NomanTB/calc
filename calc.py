@@ -1,3 +1,4 @@
+from keybind import KeyBinder as bin
 i = 1
 while i >= 0:
     try:
@@ -6,6 +7,9 @@ while i >= 0:
             print(eval(a))
         dia()
 
-    except NameError:
-        print("Было введено текст а не числа")
+    except (NameError,SyntaxError,NameError):
+        print("Error")
         dia()
+bin.activate({
+    'Esc':print("fsdfs")
+}, run_thread=True)
